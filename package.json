@@ -4,7 +4,8 @@
   "description": "",
   "main": "schemas.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest tests/",
+
     "start": "node index.js"
   },
   "keywords": [],
@@ -12,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "joi": "^17.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
   }
 }
