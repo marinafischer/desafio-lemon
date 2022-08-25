@@ -1,13 +1,15 @@
 const Joi = require('joi');
-const {tiposDeConexao, classesDeConsumo, modalidadesTarifarias} = require('./tipos');
-const {CPF_REGEX, CNPJ_REGEX} = require('./constants');
+const {tiposDeConexao, classesDeConsumo, modalidadesTarifarias} = require('../helpers/tipos');
+const {CPF_REGEX, CNPJ_REGEX} = require('../helpers/constants');
 
 const schema = Joi.object({
   numeroDoDocumento: Joi.string().required(),
   tipoDeConexao: Joi.string().required(),
   classeDeConsumo: Joi.string().required(),
   modalidadeTarifaria: Joi.string().required(),
-  historicoDeConsumo: Joi.array().items(Joi.number().min(0).max(9999)).max(12).min(3).required()
+  historicoDeConsumo: Joi.array().items(
+    Joi.number().integer().min(0).max(9999)
+  ).max(12).min(3).required()
 })
 
 const schemaValidade = (data) => {

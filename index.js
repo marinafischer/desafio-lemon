@@ -1,5 +1,5 @@
-const isElegible = require('./helpers/verifyData');
-const schemaValidade = require('./helpers/validateSchema');
+const isElegible = require('./validations/validateElegibility');
+const schemaValidade = require('./validations/validateSchema');
 // para verificar os dados chame esta função, em seguida rode o comando npm start
 
 const verifyElegible = (data) => {

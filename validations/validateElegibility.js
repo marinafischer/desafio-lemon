@@ -1,7 +1,7 @@
 const {
   MONOFASICO_MIN_CONSUMPTION, BIFASICO_MIN_CONSUMPTION, TRIFASICO_MIN_CONSUMPTION, REASONS
-} = require('./constants');
-const calculate = require('./calculator')
+} = require('./../helpers/constants');
+const calculate = require('./../helpers/calculator')
 
 const isElegible = (data) => {    
   let elegivel = true;
