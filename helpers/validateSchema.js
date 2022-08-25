@@ -22,7 +22,7 @@ const schemaValidade = (data) => {
   if(!findClasse || !findConections || !findModalidade) throw "Dados inválidos"
 
   if(!CNPJ_REGEX.test(data.numeroDoDocumento) && !CPF_REGEX.test(data.numeroDoDocumento)) {
-    throw "Documento Inválido"
+    throw "Dados inválidos"
   }
 }
 
