@@ -17,7 +17,7 @@
 ### Instale as dependências
  comando: npm install
 
-### No diretório index.js 
+### No arquivo index.js 
   chame função verifyElegible passando os parâmetros desejados
 
 ### Rode a aplicação
