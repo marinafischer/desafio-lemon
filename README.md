@@ -9,7 +9,10 @@
 ## Para começar
 
 ### Clone o Projeto
- git clone git@github.com:marinafischer/desafio-lemon.git
+ comando: git clone git@github.com:marinafischer/desafio-lemon.git
+ 
+### Acesse a Pasta
+  comando: cd desafio-lemon
 
 ### Instale as dependências
  comando: npm install
