@@ -39,8 +39,8 @@ const data2 = {
 }
 
 const data3 = {
-  "numeroDoDocumento": "14041737706",
   "classeDeConsumo": "rural",
+  "tipoDeConexao": "bifasico",
   "modalidadeTarifaria": "verde",
   "historicoDeConsumo": [
     3878,
@@ -239,6 +239,69 @@ const data14 = {
   ]
 }
 
+const data15 = {
+  "numeroDoDocumento": "14041737706",
+  "classeDeConsumo": "rural",
+  "modalidadeTarifaria": "verde",
+  "historicoDeConsumo": [
+    3878,
+    9760, 
+    5976, 
+    2797, 
+    2481, 
+    5731, 
+    7538,
+    4392, 
+    7859, 
+    4160, 
+  ]
+}
+
+const data16 = {
+  "numeroDoDocumento": "14041737706",
+  "tipoDeConexao": "bifasico",
+  "modalidadeTarifaria": "verde",
+  "historicoDeConsumo": [
+    3878,
+    9760, 
+    5976, 
+    2797, 
+    2481, 
+    5731, 
+    7538,
+    4392, 
+    7859, 
+    4160, 
+  ]
+}
+
+
+const data17 = {
+  "numeroDoDocumento": "14041737706",
+  "classeDeConsumo": "rural",
+  "tipoDeConexao": "bifasico",
+  "historicoDeConsumo": [
+    3878,
+    9760, 
+    5976, 
+    2797, 
+    2481, 
+    5731, 
+    7538,
+    4392, 
+    7859, 
+    4160, 
+  ]
+}
+
+const data18 = {
+  "numeroDoDocumento": "14041737706",
+  "classeDeConsumo": "rural",
+  "tipoDeConexao": "bifasico",
+  "modalidadeTarifaria": "verde",
+}
+
+
 module.exports = {
   data1,
   data2,
@@ -253,5 +316,9 @@ module.exports = {
   data11,
   data12,
   data13,
-  data14
+  data14,
+  data15,
+  data16,
+  data17,
+  data18,
 }

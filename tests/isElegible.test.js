@@ -14,6 +14,10 @@ const {
   data12,
   data13,
   data14,
+  data15,
+  data16,
+  data17,
+  data18
 } = require('./mocks');
 
 describe('Quando a pessoa é elegível', ()=>{
@@ -50,53 +54,84 @@ describe('Quando a pessoa não é elegível', ()=>{
   });
 });
 
-describe('Quando recebe dados inválidos', ()=>{
-  it('Quando uma das chaves não é informada', () => {
+describe('Quando é passado uma chave a mais no objeto', ()=>{
+  it('A função retorna uma mensagem de "dados inválidos"', () => {
+    const result = verifyElegible(data12);
+    expect(result).toBe('Dados inválidos')
+  });
+});
+
+describe('Quando a chave numeroDoDocumento', ()=>{
+  it('Não é informada', () => {
     const result = verifyElegible(data3);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves numeroDoDocumento não é cpf ou cnpj válido', () => {
+  it('Não é um cpf ou cnpj válido', () => {
     const result = verifyElegible(data4);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves tipoDeConexao não é uma das opções esperadas', () => {
+});
+
+describe('Quando a chaves tipoDeConexao', ()=>{
+  it('Não é informada', () => {
+    const result = verifyElegible(data15);
+    expect(result).toBe('Dados inválidos')
+  });
+    it('Não é uma das opções esperadas', () => {
     const result = verifyElegible(data5);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves classeDeConsumo não é uma das opções esperadas', () => {
+});
+
+describe('Quando a chaves classeDeConsumo', ()=>{
+  it('Não é informada', () => {
+    const result = verifyElegible(data16);
+    expect(result).toBe('Dados inválidos')
+  });
+  it('Não é uma das opções esperadas', () => {
     const result = verifyElegible(data6);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves modalidadeTarifaria não é uma das opções esperadas', () => {
+});
+
+describe('Quando a chaves modalidadeTarifaria', ()=>{
+  it('Não é informada', () => {
+    const result = verifyElegible(data17);
+    expect(result).toBe('Dados inválidos')
+  });
+  it('Não é uma das opções esperadas', () => {
     const result = verifyElegible(data7);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves historicoDeConsumo não é um array', () => {
+});
+
+describe('Quando a chaves historicoDeConsumo', ()=>{
+  it('Não é informada', () => {
+    const result = verifyElegible(data18);
+    expect(result).toBe('Dados inválidos')
+  });
+   it('Não é um array', () => {
     const result = verifyElegible(data8);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando a chaves historicoDeConsumo é um array com menos de 3 numeros', () => {
-    const result = verifyElegible(data9);
-    expect(result).toBe('Dados inválidos')
-  });
-  it('Quando a chaves historicoDeConsumo é um array com mais de 12 numeros', () => {
-    const result = verifyElegible(data10);
-    expect(result).toBe('Dados inválidos')
-  });
-  it('Quando a chaves historicoDeConsumo é um array com um numero menor que zero', () => {
-    const result = verifyElegible(data13);
-    expect(result).toBe('Dados inválidos')
-  });
-  it('Quando a chaves historicoDeConsumo é um array com um numero maior que 9999', () => {
-    const result = verifyElegible(data14);
-    expect(result).toBe('Dados inválidos')
-  });
-  it('Quando a chaves historicoDeConsumo não é um array de números', () => {
+  it('Não é um array de números', () => {
     const result = verifyElegible(data11);
     expect(result).toBe('Dados inválidos')
   });
-  it('Quando é passado uma chave a mais no objeto', () => {
-    const result = verifyElegible(data12);
+  it('É um array com menos de 3 numeros', () => {
+    const result = verifyElegible(data9);
+    expect(result).toBe('Dados inválidos')
+  });
+  it('É um array com mais de 12 numeros', () => {
+    const result = verifyElegible(data10);
+    expect(result).toBe('Dados inválidos')
+  });
+  it('É um array com um numero menor que zero', () => {
+    const result = verifyElegible(data13);
+    expect(result).toBe('Dados inválidos')
+  });
+  it('É um array com um numero maior que 9999', () => {
+    const result = verifyElegible(data14);
     expect(result).toBe('Dados inválidos')
   });
 });
