@@ -26,4 +26,5 @@
 ## Tecnologias:
   - JavaScript;
   - NodeJS;
-  - Biblioteca de validação: Joi
+  - Biblioteca de validação: Joi;
+  - Testes: Jest;
