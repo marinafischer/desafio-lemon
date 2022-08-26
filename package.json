@@ -5,7 +5,6 @@
   "main": "schemas.js",
   "scripts": {
     "test": "jest tests/",
-
     "start": "node index.js"
   },
   "keywords": [],
