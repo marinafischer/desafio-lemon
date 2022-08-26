@@ -1,10 +1,12 @@
-const { tiposDeConexao, classesDeConsumo, modalidadesTarifarias, cpf, cnpj } = require('./tipos')
+const {
+  tiposDeConexao, classesDeConsumo, modalidadesTarifarias, cpf, cnpj,
+} = require('./tipos');
 
-const enumOf = values => ({
+const enumOf = (values) => ({
   type: typeof values[0],
   enum: values,
   example: values[0],
-})
+});
 
 const input = {
   type: 'object',
@@ -32,7 +34,7 @@ const input = {
       },
     },
   },
-}
+};
 
 const output = {
   oneOf: [
@@ -66,9 +68,9 @@ const output = {
       },
     },
   ],
-}
+};
 
 module.exports = {
-	input,
+  input,
   output,
-}
+};
